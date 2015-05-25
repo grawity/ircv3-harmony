@@ -327,6 +327,7 @@ crlf         =  %x0D %x0A   ; "carriage return" "linefeed"]]></artwork></figure>
                             </t>
 
                             <t>New implementations SHOULD default to using the "rfc3454" method in the event that this token is not available.</t>
+                            <!-- TODO: Why does this break compatibility with older servers? -->
                         </section>
 
                         <section anchor="ISUPPORT-PREFIX" title="PREFIX">
@@ -354,6 +355,7 @@ crlf         =  %x0D %x0A   ; "carriage return" "linefeed"]]></artwork></figure>
                             specified if the server supports exactly these channel types.</t>
 
                             <t>The CHANMODES parameter does not require a value; if none is given, the server does not support any channel types.</t>
+                            <!-- TODO: Does this mean that channels are not supported, or simply unprefixed? -->
                         </section>
 
                         <section anchor="ISUPPORT-CHANMODES" title="CHANMODES">
@@ -447,6 +449,7 @@ crlf         =  %x0D %x0A   ; "carriage return" "linefeed"]]></artwork></figure>
                             <t>The SAFELIST token MUST NOT be specified with a value.</t>
 
                             <t>The default value for the SAFELIST token is none; that is, the client may not safely request a LIST command.</t>
+                            <!-- TODO: Does this token still make sense in a post-dialup world? -->
                         </section>
 
                         <section anchor="ISUPPORT-STATUSMSG" title="STATUSMSG">
